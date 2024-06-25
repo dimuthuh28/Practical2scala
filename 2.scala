@@ -1,27 +1,16 @@
-object app{
-  
-  var a: Int = 2
-  var b: Int = 3
-  var c: Int = 4
-  var d: Int = 5
-  var k: Float = 4.3f
+object Mains extends App{
 
-    def main(args: Array[String]): Unit = {
-        //a
-        println(-(-b) * a + c * d - (-c))
+  var a = 2
+  var b = 3
+  var c = 4
+  var d = 5;
+  var k = 4.3f;
 
-        //b
-        println({a += 1; a})
+  var g = a
 
-        //c
-        val g: Float = 3.0f
-        println(-2 * (g - k) + c)
-
-        //d
-        println ({c += 1; c});
-
-        //e
-        print({c += 1 ; a+=1; c * a})
-
-    }
+  println(b * a + c * d)
+  println({ val temp = a; a += 1; temp })
+  println(-2 * (g - k) + c)
+  println({ val temp = c; c += 1; temp })
+  println({ c += 1; c = c * a; a += 1; c })
 }
